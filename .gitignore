@@ -9,3 +9,12 @@ dist/
 build/
 .DS_Store
 Thumbs.db
+
+# Dev-only files (not for students)
+.claude/
+.tmp/
+.venv-review/
+docs/
+AGENTS.md
+run_cells.py
+test_notebook.py
