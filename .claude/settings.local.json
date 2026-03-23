@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find D:/work/study/y_practicum/langfuse -type f -name *.md -o -name *.txt -o -name *.toml -o -name *.json -o -name *.yaml -o -name *.yml)",
+      "WebSearch",
+      "WebFetch(domain:langfuse.com)",
+      "Bash(python -c \"import json; nb = json.load\\(open\\(''rag_notebook.ipynb''\\)\\); print\\(f''Total cells: {len\\(nb[\"\"cells\"\"]\\)}''\\); [print\\(f''Cell {i}: {cell[\"\"cell_type\"\"]} - {cell[\"\"source\"\"][0][:60] if cell[\"\"source\"\"] else \"\"empty\"\"}''\\) for i, cell in enumerate\\(nb[''cells''][:30]\\)]\")",
+      "Bash(python -c \"import json, sys; nb = json.load\\(open\\(''''rag_notebook.ipynb'''', encoding=''''utf-8''''\\)\\); cells = nb[''''cells'''']; print\\(f''''Total cells: {len\\(cells\\)}''''\\); print\\(''''\\\\n=== NOTEBOOK STRUCTURE ===\\\\n''''\\); [print\\(f''''Cell {i:3d} \\({cell[\"\"cell_type\"\"]:8s}\\): {str\\(cell[\"\"source\"\"][:1]\\)[0:80]}''''\\) for i, cell in enumerate\\(cells\\)]\")",
+      "Bash(python:*)",
+      "Bash(iconv -f UTF-8 -t ASCII//TRANSLIT)",
+      "Bash(python -c \"import json; nb = json.load\\(open\\(''rag_notebook.ipynb'', encoding=''utf-8''\\)\\); cells = nb[''cells'']; headings = [c for c in cells if c[''cell_type'']==''markdown'' and ''''.join\\(c[''source'']\\).startswith\\(''#''\\)]; print\\(f''Total: {len\\(cells\\)} cells, {len\\(headings\\)} section headings''\\); import re; [print\\(f''{i}: {re.sub\\(r\"\"[^a-zA-Z0-9 ]\"\", \"\"\"\", \"\"\"\".join\\(c[\"\"source\"\"]\\).split\\(chr\\(10\\)\\)[0][:60]\\)}''\\) for i, c in enumerate\\(headings[:20]\\)]\")",
+      "Bash(python -c \":*)"
+    ]
+  }
+}
