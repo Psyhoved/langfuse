@@ -86,8 +86,6 @@ jupyter notebook langfuse_notebook.ipynb
 ├── docker-compose.yml        # Локальный Langfuse
 ├── requirements.txt          # Зависимости Python
 ├── data/                     # Учебные документы для RAG
-├── test_notebook.py          # Валидация структуры ноутбука
-└── run_cells.py              # Запуск отдельных ячеек
 ```
 
 ## Лицензия
